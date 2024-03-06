@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://i.pinimg.com/originals/4d/98/36/4d9836c7196102a795d301767b67e3bc.jpg');
+        }
+        .app {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            float: left;
+        }
+        .app img {
+            max-width: 100%;
+        }
+        .app-details {
+            text-align: center;
+              color: white;
+              
+        }
+        .container{
+             position: relative;
+            background: rgba(0, 6, 0, 0.5); /* Blue color with transparency */
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px); /* Apply blur effect */
+            max-height: 500px; /* Set max height for scrollability */
+            overflow-y: auto; /* Enable vertical scrolling */
+            margin: 0 auto; /* Center the container horizontally */
+            color: white; /* Set text color to white */
+        }
+        h1{
+            color:white;
+            
+        }
+        
+        h2{
+            color : white;
+        }
+        h3{
+            color:orange;
+        }
+        h4{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>App Store UR Industries</h1>
+    <h3>only android apps avalible now soon iso will come</h3>
+     <div class="container">
+        <div id="apps-container"></div>
+    </div>
+    <a
+    href = "https://sites.google.com/view/urfrequency/home"
+<br><h4>click here to visit UR Frequency </h5></br>
+</a>
+    <a
+    href = "https://urmathematician.github.io/urfrequency0/"
+<br><h4>click here to visit UR Frequency Celestial Data</h5></br>
+</a>
+
+    <a
+    href = "https://sites.google.com/view/ur-industries/home"
+<br><h4>click here to visit UR Industries</h5></br>
+</a>
+
+ 
+ <img src="https://img.hotimg.com/UR-Frequency-Old-Logo.png" alt="URFrequency Logo" style="width: 200px; height: auto; position: absolute; top: 10px; right: 40px;">
+</div>
+    <script>
+        // Sample app data (you can replace this with actual app data fetched from a database)
+        var apps = [
+            {
+                name: "UR Frequency Celestial",
+                icon: "https://img.hotimg.com/UR_Industries__Universal_Logo__-removebg.png",
+                downloadLink: "https://mega.nz/file/MQl1gL5Z#aa35mJqOUAMa03i6G-8RhSmqpI6JcHQNx9F2u7ndfZo"
+            },
+            {
+                name: "UR Toons",
+                icon: "https://i.pinimg.com/originals/af/13/15/af131532f9fb9a3715a5dcac051b55db.jpg",
+                downloadLink: "https://mega.nz/file/9BEC3QDY#Nk7C3mHWz9wqUkBPAglg89azJRFGX8F5eWckr6cimIk"
+            },
+        
+        ];
+
+        // Function to render apps on the webpage
+        function renderApps() {
+            var appsContainer = document.getElementById("apps-container");
+            appsContainer.innerHTML = "";
+            apps.forEach(function(app) {
+                var appElement = document.createElement("div");
+                appElement.classList.add("app");
+                var icon = document.createElement("img");
+                icon.src = app.icon;
+                appElement.appendChild(icon);
+
+                // Sub-container for app details
+                var appDetails = document.createElement("div");
+                appDetails.classList.add("app-details");
+
+                var name = document.createElement("p");
+                name.textContent = app.name;
+                appDetails.appendChild(name);
+
+                var downloadLink = document.createElement("a");
+                downloadLink.href = app.downloadLink;
+                downloadLink.textContent = "Download";
+                appDetails.appendChild(downloadLink);
+
+                appElement.appendChild(appDetails);
+
+                appsContainer.appendChild(appElement);
+            });
+        }
+
+        // Call the renderApps function when the page loads
+        window.onload = function() {
+            renderApps();
+        };
+    </script>
+</body>
+</html>
