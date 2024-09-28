@@ -58,342 +58,158 @@
         h5{
             color:green;
         }
+           .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color:#333;
+      color: #fff;
+      position: relative;
+      z-index: 3; /* Ensure header stays on top */
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      animation: slideIn 2s ease-out;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      animation: logoAnimation 2s ease-in-out;
+    }
+
+    .nav-menu {
+      position: absolute;
+      top: 60px; /* Adjust based on header height */
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      z-index: 3; /* Ensure the navigation menu appears above the container */
+    }
+
+    .nav-menu ul {
+      display: flex;
+      list-style: none;
+      flex-direction: column; /* Stack items vertically */
+      padding: 10px 20px;
+    }
+
+    .nav-menu ul li {
+      margin: 10px 0; /* Space between items */
+      opacity: 0; /* Initially hidden */
+      transform: translateX(-100%); /* Start from left */
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .nav-menu.open {
+      max-height: 300px; /* Increased height for more items */
+    }
+
+    .nav-menu.open ul li {
+      opacity: 1; /* Fade in */
+      transform: translateX(0); /* Slide in */
+    }
+
+    .nav-menu ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-menu ul li a:hover {
+      color: #f4a261;
+    }
+
+    
+ 
+.menu-icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    z-index: 4;
+}
+
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-50%);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes logoAnimation {
+      from {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+         .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: auto; /* Push footer to the bottom */
+    }
+
+    .footer a {
+      color: #f4a261;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+        
+        
     </style>
 </head>
 <body>
-<h1 style="text-align: center;">App Store UR Industries</h1>
-
-    <h2>Android Apps + Games</h3>
-    <div class="container">
-        <div id="android-apps-container"></div>
+    <header class="header">
+    <div class="logo">
+      <img src="https://img.hotimg.com/UR-Frequency-Old-Logo.png" alt="UR-Frequency-Old-Logo" />
+      UR Store
     </div>
-    <h2>PC + Mac Apps</h2>
-    <div class="container">
-        <div id="pc-apps-container"></div>
-    </div>
-    <h2>PC Games</h2>
-    <div class="container">
-        <div id="pc-games-container"></div>
-    </div>
-
-
-    <a href="https://urmathematician.github.io/urfrequency0/"><h4>click here to visit UR Frequency Celestial Data</h4></a>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div> <!-- Added menu icon -->
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="https://urmathematician.github.io/urstore/">Home</a></li>
+        <li><a href="">UR Industries</a></li>
+        <li><a href="https://urmathematician.github.io/urtv/">UR Frequency Animation</a></li>
+        <li><a href="https://urmathematician.github.io/ur_frequency/">UR Frequency</a></li>
+        <li><a href="">UR Learning</a></li>
+      </ul>
+    </nav>
+</header>
+<h2>Due to compiler Error we lost 3000 lines of code. Complier hang up and it restart and all code vanished All things destoryed But soon we'll make new app store</h2>
+</div>
 
     <script>
-        // Sample app data (you can replace this with actual app data fetched from a database)
-        var androidApps = [
-            {
-                name: "UR Frequency Celestial",
-                icon: "https://img.hotimg.com/UR_Industries__Universal_Logo__-removebg.png",
-                downloadLink: "https://drive.google.com/file/d/1yhhyr7RXLTzsHyx3L4tDB-y4MWI7jk8k/view?usp=drive_link"
-            },
-            {
-                name: "UR Frequency Animations",
-                icon: "https://i.pinimg.com/564x/9d/32/5c/9d325cf42a2d6bbb2945e26d110b5fc5.jpg",
-                downloadLink: "https://drive.google.com/file/d/1NaVpmy25GfNRN1RPKkiS-j6J4mkCaMFu/view?usp=drive_link"
-            },
-            {
-                name: "UR_Chat_bot",
-                icon: "https://i.pinimg.com/736x/e9/39/5f/e9395f46e1f3b11d8436e80314dae267.jpg",
-                downloadLink: "https://ai2.appinventor.mit.edu/b/1t54c"
-            },
-            {
-                name: "UR App Store",
-                icon: "https://via.placeholder.com/200",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            {
-                name: "MineCraft",
-                icon: "https://via.placeholder.com/200",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            
-        
-        ];
-<meta name="google-adsense-account" content="ca-pub-7905341714144701">
-        // Sample data for PC apps
-        var pcApps = [
-           {
-                name: "UR Frequency Celestial",
-                icon: "https://img.hotimg.com/UR_Industries__Universal_Logo__-removebg.png",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            {
-                name: "UR Toons",
-                icon: "https://i.pinimg.com/originals/af/13/15/af131532f9fb9a3715a5dcac051b55db.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            {
-                name: "UR Frequency",
-                icon: "https://via.placeholder.com/200",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            {
-                name: "Solid Works 2022 setup + video install avalible",
-                icon: "https://i.pinimg.com/736x/fa/b1/ee/fab1ee1d321b37b6fadfd4dc37a60e04.jpg",
-                downloadLink: " "
-            },
-            {
-                name: "Auto CAD Mechanical 2021 ",
-                icon: "https://i.pinimg.com/564x/3e/d4/4f/3ed44f9852ab178a806e36edd906c88b.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },{
-                name: "Ansys Products in Tera box drive 2015 and 2022a",
-                icon: "https://i.pinimg.com/564x/34/00/b8/3400b8a36bff2eac6304fb074433e11b.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },{
-                name: "Epic games with video to install Unreal Engine",
-                icon: "https://i.pinimg.com/564x/6f/b6/ce/6fb6ce2600b9a28fc2372f7aae3a6a44.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            {
-                name: "Blender 360",
-                icon: "https://i.pinimg.com/564x/e0/53/3c/e0533c571eba8abe6472edf7c8fee693.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            {
-                name: " Office 2007",
-                icon: "https://i.pinimg.com/564x/eb/e4/fe/ebe4fe98c38caa6192f7a52e5fba7081.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            {
-                name: "office 2021 latest 2023 update",
-                icon: "https://i.pinimg.com/originals/8f/da/9b/8fda9beb760b9241ff7fbea1f4784915.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },{
-                name: "Matlab 2023a",
-                icon: "https://i.pinimg.com/564x/48/6c/3b/486c3b1327007ee75a1c58cbc9f43c7c.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },{
-                name: "Foxit PDF reader",
-                icon: "https://i.pinimg.com/564x/74/7e/dd/747edd6a87cf2e0caca3688d27444975.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            {
-                name: "Win 10 including office + free key",
-                icon: "https://i.pinimg.com/564x/74/b7/31/74b7310b7d36bff6b83d09acf9506ee9.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },{
-                name: "Win 11 all editions",
-                icon: "https://i.pinimg.com/564x/e7/46/cb/e746cbe647438ead9262561a0dfd5236.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },{
-                name: "Linux Mint",
-                icon: "https://i.pinimg.com/564x/91/ad/fe/91adfe3a47553d262b40331b7c27dcf5.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },{
-                name: "Linux Ubuntu",
-                icon: "https://i.pinimg.com/564x/a6/1b/9b/a61b9bda0f45952f9c756ea13f108ec2.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            {
-                name: "Win 11 Lite version",
-                icon: "https://i.pinimg.com/564x/b0/ff/76/b0ff762fcff7935d8f164dbb04d5f204.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            {
-                name: "Linux Kali",
-                icon: "https://i.pinimg.com/564x/2a/8b/31/2a8b31b665647e564feb1d44f4487aa2.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            {
-                name: "Virtual meachines",
-                icon: "https://i.pinimg.com/736x/5d/dd/38/5ddd38b79ffdba4319b7a9f26d2267b1.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            {
-                name: "Filmora",
-                icon: "https://i.pinimg.com/564x/95/67/12/956712f741713f9ccb6af2362392bcf0.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },{
-                name: "Remote desktop",
-                icon: "https://i.pinimg.com/564x/b9/c7/15/b9c715b9c465d4cfb1bd11cb676bc130.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },{
-                name: "Ansys 2016 all products",
-                icon: "https://i.pinimg.com/564x/46/5e/5d/465e5d048a79be32a14c74d602c57692.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            
-            {
-                name: "Java Jdk",
-                icon: "https://i.pinimg.com/564x/86/ad/01/86ad01aac334ed269e9d33dab95a2217.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-
-            {
-                name: "Trace Pro ray traceing",
-                icon: "https://i.pinimg.com/564x/32/1c/e6/321ce6be4fbc71e959796b34b6483f0c.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            {
-                name: "Scaps Solar Research",
-                icon: "https://i.pinimg.com/564x/a6/99/b7/a699b7c559f3acb0491e2e643dd23eb6.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-            {
-                name: "proteus",
-                icon: "https://i.pinimg.com/564x/75/56/e4/7556e4b47ae6799af8850cad2d434175.jpg",
-                downloadLink: "https://example.com/sample-pc-app-2"
-            },
-        ];
-<meta name="google-adsense-account" content="ca-pub-7905341714144701">
-        // Sample data for PC games
-        var pcGames = [
-              {
-                name: "Call of Duty",
-                icon: "https://i.pinimg.com/564x/dc/8e/a8/dc8ea89dfc6dc2298084e5375e5d6fca.jpg",
-                downloadLink: "https://example.com/sample-pc-game-2"
-            },
-           
-             {
-                name: "Assissan's Creed I",
-                icon: "https://i.pinimg.com/564x/1c/ca/93/1cca933e2420c0b38f50ed8d77b82a66.jpg",
-                downloadLink: "https://example.com/sample-pc-game-2"
-            },
-           
-           {
-                name: "Prince of persia 2008",
-                icon: "https://i.pinimg.com/564x/c7/75/47/c77547fe0646b7ca0ebbffa86c8fc110.jpg",
-                downloadLink: "https://drive.google.com/file/d/1z8o9BrG4tytJeYbbzjosYbTdO41I2_dg/view?usp=drive_link"
-            },
-            {
-                name: "Prince of Persia Forgotten Sands",
-                icon: "https://i.pinimg.com/564x/74/d5/0f/74d50fc8f5f21c4164693e917df99a1c.jpg",
-                downloadLink: "https://example.com/sample-pc-game-1"
-            },
-            {
-                name: "Need for speed",
-                icon: "https://i.pinimg.com/564x/18/3c/d8/183cd8db3bb56935f532b101d3b89b58.jpg",
-                downloadLink: "https://example.com/sample-pc-game-2"
-            },
-             {
-                name: "Incridible Hulk",
-                icon: "https://i.pinimg.com/originals/3e/2f/6a/3e2f6a9ce186fe59b4a7d392e1c96764.jpg",
-                downloadLink: "https://drive.google.com/file/d/1Cwxh7Qd1WDwyCjOpPZf36x4JmKk6Z6hp/view?usp=drive_link"
-            },
-            {
-                name: "Just Cause ",
-                icon: "https://i.pinimg.com/736x/55/66/36/556636ed84558913ca011bc40b888ad1.jpg",
-                downloadLink: "https://example.com/sample-pc-game-2"
-            },
-            {
-                name: "GTA 3",
-                icon: "https://i.pinimg.com/736x/59/b0/d6/59b0d6fa8dedcbfdc9c84fa3205e00e9.jpg",
-                downloadLink: "https://example.com/sample-pc-game-2"
-            },
-            {
-                name: "IGI 2",
-                icon: "https://i.pinimg.com/736x/69/4e/a4/694ea4afb7492aa6c504df5249e7a43f.jpg",
-                downloadLink: "https://example.com/sample-pc-game-2"
-            },
-            
-          {
-                name: "GTA Mix (VC, San , 3)",
-                icon: " https://i.pinimg.com/564x/23/ac/ef/23acef7fc95f5541f4703b98b02734e0.jpg",
-                downloadLink: "https://drive.google.com/file/d/17dTJMgIdi5NanEbPsYSO8ZocsQ5BF0yw/view"
-            }
-            
-        ];
-
-        // Function to render Android apps on the webpage
-        function renderAndroidApps() {
-            var androidAppsContainer = document.getElementById("android-apps-container");
-            androidAppsContainer.innerHTML = "";
-            androidApps.forEach(function(app) {
-                var appElement = document.createElement("div");
-                appElement.classList.add("app");
-                var icon = document.createElement("img");
-                icon.src = app.icon;
-                appElement.appendChild(icon);
-
-                // Sub-container for app details
-                var appDetails = document.createElement("div");
-                appDetails.classList.add("app-details");
-
-                var name = document.createElement("p");
-                name.textContent = app.name;
-                appDetails.appendChild(name);
-
-                var downloadLink = document.createElement("a");
-                downloadLink.href = app.downloadLink;
-                downloadLink.textContent = "Download";
-                appDetails.appendChild(downloadLink);
-
-                appElement.appendChild(appDetails);
-
-                androidAppsContainer.appendChild(appElement);
-            });
-        }
-
-        // Function to render PC apps on the webpage
-        function renderPCApps() {
-            var pcAppsContainer = document.getElementById("pc-apps-container");
-            pcAppsContainer.innerHTML = "";
-            pcApps.forEach(function(app) {
-                var appElement = document.createElement("div");
-                appElement.classList.add("app");
-                var icon = document.createElement("img");
-                icon.src = app.icon;
-                appElement.appendChild(icon);
-
-                // Sub-container for app details
-                var appDetails = document.createElement("div");
-                appDetails.classList.add("app-details");
-
-                var name = document.createElement("p");
-                name.textContent = app.name;
-                appDetails.appendChild(name);
-
-                var downloadLink = document.createElement("a");
-                downloadLink.href = app.downloadLink;
-                downloadLink.textContent = "Download";
-                appDetails.appendChild(downloadLink);
-
-                appElement.appendChild(appDetails);
-
-                pcAppsContainer.appendChild(appElement);
-            });
-        }
-
-        // Function to render PC games on the webpage
-        function renderPCGames() {
-            var pcGamesContainer = document.getElementById("pc-games-container");
-            pcGamesContainer.innerHTML = "";
-            pcGames.forEach(function(game) {
-                var gameElement = document.createElement("div");
-                gameElement.classList.add("app");
-                var icon = document.createElement("img");
-                icon.src = game.icon;
-                gameElement.appendChild(icon);
-
-                // Sub-container for game details
-                var gameDetails = document.createElement("div");
-                gameDetails.classList.add("app-details");
-
-                var name = document.createElement("p");
-                name.textContent = game.name;
-                gameDetails.appendChild(name);
-
-                var downloadLink = document.createElement("a");
-                downloadLink.href = game.downloadLink;
-                downloadLink.textContent = "Download";
-                gameDetails.appendChild(downloadLink);
-
-                gameElement.appendChild(gameDetails);
-
-                pcGamesContainer.appendChild(gameElement);
-            });
-        }
-       
-
-// Call the render functions when the page loads
-window.onload = function() {
-    renderAndroidApps();
-    renderPCApps();
-    renderPCGames();
-    renderMac(); // Call the new function to render Mac apps
-};
+  
     </script>
+     <footer class="footer">
+    <p>&copy; 2024 UR Frequency. All rights reserved.</p>
+    <p>Just for Hobby</p>
+      Follow us on: 
+      <a href="https://www.facebook.com/profile.php?id=61565605880105" target="_blank">Facebook</a> | 
+      <a href="https://x.com/ur_frequency" target="_blank">Twitter</a> | 
+      <a href="https://www.instagram.com/ur._frequency/" target="_blank">Instagram</a>
+    </p>
+  </footer>
 </body>
 </html>
