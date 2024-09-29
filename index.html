@@ -1,64 +1,29 @@
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Store </title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7905341714144701"
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="https://img.hotimg.com/1ef97f5ba533d7bd7.png" type="image/png">
+  <meta name="google-site-verification" content="azthnYNKg3HDplNjwJN9vymVU-P18dp3iyE3FNFKORc" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7905341714144701"
      crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-7905341714144701"/>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: url('https://i.pinimg.com/originals/4d/98/36/4d9836c7196102a795d301767b67e3bc.jpg');
-        }
-        .app {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px;
-            width: 200px;
-            float: left;
-        }
-        .app img {
-        max-width: 100%;
-        height: 150px; /* Set a fixed height for all app icons */
-        object-fit: cover; /* Maintain aspect ratio */
+  <title>UR Store</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-        .app-details {
-            text-align: center;
-              color: white;
-              
-        }
-        .container{
-             position: relative;
-            background: rgba(0, 6, 0, 0.5); /* Blue color with transparency */
-            padding: 40px;
-            border-radius: 20px;
-            backdrop-filter: blur(8px); /* Apply blur effect */
-            max-height: 500px; /* Set max height for scrollability */
-            overflow-y: auto; /* Enable vertical scrolling */
-            margin: 0 auto; /* Center the container horizontally */
-            color: white; /* Set text color to white */
-        }
-        h1{
-            color:lime;
-            
-        }
-        
-        h2{
-            color : white;
-        }
-        h3{
-            color:orange;
-        }
-        h4{
-            color:white;
-        }
-        h5{
-            color:green;
-        }
-           .header {
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensure footer stays at the bottom */
+
+    }
+    
+    
+    .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -130,13 +95,12 @@
     }
 
     
- 
-.menu-icon {
-    display: block;
+    .menu-icon {
+    display: block; /* Ensure it is block for smaller screens */
     font-size: 30px;
     cursor: pointer;
-    color: white;
-    z-index: 4;
+    color: white; /* Make sure it's visible on a dark background */
+    z-index: 4; /* Ensure it's on top of other elements */
 }
 
 
@@ -161,7 +125,20 @@
         transform: scale(1);
       }
     }
-         .footer {
+        .container-text {
+            display:block;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 20px;
+        }.container-2 {
+            display:flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 20px;
+        }
+   
+    /* Footer styles */
+    .footer {
       background-color: #333;
       color: white;
       text-align: center;
@@ -174,37 +151,840 @@
       text-decoration: none;
       margin: 0 10px;
     }
+ .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 100px);  /* Adjust height to avoid overlap */
+    overflow-y: auto;              /* Enable vertical scrolling */
+    margin-top: 80px;             /* Ensure margin-top is equal to header height */
+}
+h2 {
+            margin-top: 0px; /* Adjusted to provide enough space below the fixed header */
+             background: linear-gradient(90deg, #4CAF50, #2196F3); /* Gradient header */
+            color: white;
+            padding: 15px; /* Padding around the heading */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            width: 100%; /* Full width */
+            text-align: center; /* Center the text */
+            margin-bottom: 20px; /* Space below the header */
+        }
+
+
+
+       .icon-container {
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 150px;
+    display: flex;            /* Use flexbox for alignment */
+    flex-direction: column;   /* Arrange items vertically */
+    justify-content: space-between; /* Space between items */
+    height: 200px;           /* Set a fixed height for uniformity */
+}
+
+.icon-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.icon-text {
+    margin: 0;              /* Remove default margin from paragraph */
+    font-size: 14px;        /* Adjust font size if needed */
+    line-height: 1.4;       /* Ensure text line spacing */
+}
+
+.button {
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 20px;     /* Adjust padding for button */
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;       /* Margin above button for spacing */
+    align-self: center;      /* Center the button */
+    width: 100%;             /* Make button take full width */
+}
 
         
-        
-    </style>
-</head>
+</style>
+
 <body>
     <header class="header">
+      
     <div class="logo">
       <img src="https://img.hotimg.com/UR-Frequency-Old-Logo.png" alt="UR-Frequency-Old-Logo" />
-      UR Store
+      UR Frequency
     </div>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div> <!-- Added menu icon -->
     <nav class="nav-menu">
       <ul>
-        <li><a href="https://urmathematician.github.io/urstore/">Home</a></li>
+        <li><a href="https://urmathematician.github.io/ur_frequency/">Home</a></li>
         <li><a href="">UR Industries</a></li>
         <li><a href="https://urmathematician.github.io/urtv/">UR Frequency Animation</a></li>
-        <li><a href="https://urmathematician.github.io/ur_frequency/">UR Frequency</a></li>
-        <li><a href="">UR Learning</a></li>
+        <li><a href="https://urmathematician.github.io/urstore/">UR Store</a></li>
+        <li><a href="https://urmathematician.github.io/urtv/">UR Automation Products</a></li>
+        <li><a href="https://urmathematician.github.io/ubaid/">About Us</a></li>
+        <li><a href="https://urmathematician.github.io/urtv/">Contact Us</a></li>
       </ul>
     </nav>
-</header>
-<h2>Due to compiler Error we lost 3000 lines of code. Complier hang up and it restart and all code vanished All things destoryed But soon we'll make new app store</h2>
-</div>
+    <div class="menu-icon">&#9776;</div>
+  </header>
+        <h3>All games and apps that was paid from PlayStore or App Store free avalible here. And on PC games you have to do alot of things to install like merge disk and etc. But here you'll find only setup and then you can install. Also The Craked versions of apps are also avalible here.</h3>
+    <h2>Android Mobile Games and Apps</h2>
+    
+    <div class="container">
 
-    <script>
-     document.querySelector('.menu-icon').addEventListener('click', function() {
+        <div class="icon-container">
+            <img src="https://img.hotimg.com/UR_Industries__Universal_Logo__-removebg.png" alt="UR Frequency Celestial">
+            <p>UR Frequency Celestail</p>
+            <a href="download-link-1" class="button">Download</a>
+        </div>
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/9d/32/5c/9d325cf42a2d6bbb2945e26d110b5fc5.jpg" alt="UR Frequency Animations">
+            <p>UR Frequency Animations</p>
+            <a href="download-link-2" class="button">Download</a>
+        </div>
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/62/e2/de/62e2dee717489caeecd04cbe3acc3b6b.jpg" alt="IGI 1 (mobile)">
+            <p>IGI 1 (mobile)</p>
+            <a href="download-link-3" class="button">Download</a>
+        </div>
+                <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/78/8a/f9/788af9dc251d14a87d5d57122c8b02c2.jpg" alt="IGI 2 (Mobile)">
+            <p>UR Chat BOT</p>
+            <a href="download-link-4" class="button">Download</a>
+        </div>
+          <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/6a/f7/bf/6af7bf449e08b9b0228bbcb7c7d47465.jpg" alt="IGI 2 (Mobile)">
+            <p>Mobile Assistant</p>
+            <a href="download-link-4" class="button">Download</a>
+        </div>
+                  <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/1c/85/6b/1c856ba01ce866b390bd81a5aa9746fa.jpg" alt="IGI 2 (Mobile)">
+            <p>Ubuntu Linux Mobile</p>
+            <a href="download-link-4" class="button">Download</a>
+        </div>
+            <div class="icon-container">
+            <img src="" alt="VPN">
+            <p>Free VPN</p>
+            <a href="download-link-4" class="button">Download</a>
+        </div>
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/62/e2/de/62e2dee717489caeecd04cbe3acc3b6b.jpg" alt="IGI 2 (Mobile)">
+            <p>IGI 2 (Mobile)</p>
+            <a href="download-link-4" class="button">Download</a>
+        </div>
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/68/e9/2f/68e92f962c427286c4646369e83b053a.jpg" alt="GTA VC (mobile)">
+            <p>CAM-Scaner (everything unlocked)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+         <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/24/d8/50/24d850a88531a991a413a2d697ec9a1d.jpg" alt="GTA VC (mobile)">
+            <p>WPS Office (everything unlocked)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/6b/b1/9e/6bb19ed1bc51228ac7985dc738c35f9d.jpg" alt="GTA III (mobile)">
+            <p>GTA III (mobile)</p>
+            <a href="download-link-5" class="button">Download</a>
+        </div>
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/c9/bf/85/c9bf854d9dd5434aafa920027598cb57.jpg" alt="GTA VC (mobile)">
+            <p>GTA VC (mobile)</p>
+            <a href="download-link-6" class="button">Download</a>
+        </div>
+                <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/3e/d6/e4/3ed6e4d9964f31ea9de5f50d73eac3b5.jpg" alt="GTA VC (mobile)">
+            <p>GTA San (mobile)</p>
+            <a href="download-link-6" class="button">Download</a>
+
+        </div>
+                <div class="icon-container">
+            <img src="            https://i.pinimg.com/736x/79/bb/54/79bb54a86a9244c08013b8cb95ebe76c.jpg" alt="GTA VC (mobile)">
+            <p>HitMan Sniper (mobile)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+         <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/61/d2/f7/61d2f7bf7693d842ad6044ae922e5e65.jpg" alt="GTA VC (mobile)">
+            <p>Bus Simulator (2015 old game)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+             <div class="icon-container">
+            <img src=" https://i.pinimg.com/736x/9f/d8/d2/9fd8d2439b492585e62b762cafc67020.jpg" alt="GTA VC (mobile)">
+            <p>MineCraft (2019 version)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/95/67/12/956712f741713f9ccb6af2362392bcf0.jpg" alt="GTA VC (mobile)">
+            <p>Filmora (mod everything unlocked)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/5f/4b/01/5f4b018872637b0aa33e3a6c6297d89d.jpg" alt="GTA VC (mobile)">
+            <p>CapCUT (mod everything unlocked)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+         <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/49/12/14/4912144d6d11339c3dca1214323f034f.jpg" alt="GTA VC (mobile)">
+            <p>Retro nein icon</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/74/56/2a/74562a539e1e9f161abbfbc9545df03c.png" alt="GTA VC (mobile)">
+            <p>Remote Mouse</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+       <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/6d/ce/52/6dce525006b3a0aba10c4262289975c3.jpg" alt="GTA VC (mobile)">
+            <p>Shadow of death</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/74/8a/96/748a96d2615d4bce7aacacc6cfb23402.jpg" alt="GTA VC (mobile)">
+            <p>Neon Avatrs and Wallpaper</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/78/98/c7/7898c77dbc80fa58cc3b5e963d2c47fc.jpg" alt="GTA VC (mobile)">
+            <p>UR Store</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/3b/42/c9/3b42c95da1488e6e6abf20345b3b5a3a.jpg" alt="GTA VC (mobile)">
+            <p>UR Frequency Live</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+    </div>
+
+    <h2>iOS Mobile Games and Apps</h2>
+    <div class="container">
+       
+        <div class="icon-container">
+            <img src="https://img.hotimg.com/UR_Industries__Universal_Logo__-removebg.png" alt="UR Frequency Celestial">
+            <p>UR Frequency Celestail</p>
+            <a href="download-link-1" class="button">Download</a>
+        </div>
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/9d/32/5c/9d325cf42a2d6bbb2945e26d110b5fc5.jpg" alt="UR Frequency Animations">
+            <p>UR Frequency Animations</p>
+            <a href="download-link-2" class="button">Download</a>
+        </div>
+
+                <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/78/8a/f9/788af9dc251d14a87d5d57122c8b02c2.jpg" alt="IGI 2 (Mobile)">
+            <p>UR Chat BOT</p>
+            <a href="download-link-4" class="button">Download</a>
+        </div>
+          <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/6a/f7/bf/6af7bf449e08b9b0228bbcb7c7d47465.jpg" alt="IGI 2 (Mobile)">
+            <p>Mobile Assistant</p>
+            <a href="download-link-4" class="button">Download</a>
+        </div>
+              
+            <div class="icon-container">
+            <img src="" alt="VPN">
+            <p>Free VPN</p>
+            <a href="download-link-4" class="button">Download</a>
+        </div>
+
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/68/e9/2f/68e92f962c427286c4646369e83b053a.jpg" alt="GTA VC (mobile)">
+            <p>CAM-Scaner (everything unlocked)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+         <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/24/d8/50/24d850a88531a991a413a2d697ec9a1d.jpg" alt="GTA VC (mobile)">
+            <p>WPS Office (everything unlocked)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+
+                <div class="icon-container">
+            <img src="            https://i.pinimg.com/736x/79/bb/54/79bb54a86a9244c08013b8cb95ebe76c.jpg" alt="GTA VC (mobile)">
+            <p>HitMan Sniper (mobile)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/95/67/12/956712f741713f9ccb6af2362392bcf0.jpg" alt="GTA VC (mobile)">
+            <p>Filmora (mod everything unlocked)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/5f/4b/01/5f4b018872637b0aa33e3a6c6297d89d.jpg" alt="GTA VC (mobile)">
+            <p>CapCUT (mod everything unlocked)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+         <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/49/12/14/4912144d6d11339c3dca1214323f034f.jpg" alt="GTA VC (mobile)">
+            <p>Retro nein icon</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/74/56/2a/74562a539e1e9f161abbfbc9545df03c.png" alt="GTA VC (mobile)">
+            <p>Remote Mouse</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+       <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/6d/ce/52/6dce525006b3a0aba10c4262289975c3.jpg" alt="GTA VC (mobile)">
+            <p>Shadow of death</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/74/8a/96/748a96d2615d4bce7aacacc6cfb23402.jpg" alt="GTA VC (mobile)">
+            <p>Neon Avatrs and Wallpaper</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/78/98/c7/7898c77dbc80fa58cc3b5e963d2c47fc.jpg" alt="GTA VC (mobile)">
+            <p>UR Store</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/3b/42/c9/3b42c95da1488e6e6abf20345b3b5a3a.jpg" alt="GTA VC (mobile)">
+            <p>UR Frequency Live</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+    </div>
+
+        <h2>Windows Engineering apps and Tools</h2>
+    <div class="container">
+         <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/34/0f/a0/340fa03c1c58f41ee2356c88891f8b88.jpg" alt="GTA VC (mobile)">
+            <p>SolidWorks 2000</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/34/0f/a0/340fa03c1c58f41ee2356c88891f8b88.jpg" alt="GTA VC (mobile)">
+            <p>SolidWorks 2014</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/34/0f/a0/340fa03c1c58f41ee2356c88891f8b88.jpg" alt="GTA VC (mobile)">
+            <p>SolidWorks 2018</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+    <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/34/0f/a0/340fa03c1c58f41ee2356c88891f8b88.jpg" alt="GTA VC (mobile)">
+            <p>SolidWorks 2020</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+    <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/34/0f/a0/340fa03c1c58f41ee2356c88891f8b88.jpg" alt="GTA VC (mobile)">
+            <p>SolidWorks 2022</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+    <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/34/0f/a0/340fa03c1c58f41ee2356c88891f8b88.jpg" alt="GTA VC (mobile)">
+            <p>SolidWorks 2023</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+    
+    <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/34/0f/a0/340fa03c1c58f41ee2356c88891f8b88.jpg" alt="GTA VC (mobile)">
+            <p>SolidWorks 2024</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+    <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/bf/0e/b8/bf0eb8113936e019b4750158b3d16b2d.jpg" alt="GTA VC (mobile)">
+            <p>MS Office 2007</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/bf/0e/b8/bf0eb8113936e019b4750158b3d16b2d.jpg" alt="GTA VC (mobile)">
+            <p>MS Office 2016</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/bf/0e/b8/bf0eb8113936e019b4750158b3d16b2d.jpg" alt="GTA VC (mobile)">
+            <p>MS Office 2019</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/bf/0e/b8/bf0eb8113936e019b4750158b3d16b2d.jpg" alt="GTA VC (mobile)">
+            <p>MS Office 2021</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/bf/0e/b8/bf0eb8113936e019b4750158b3d16b2d.jpg" alt="GTA VC (mobile)">
+            <p>MS Office 2023</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+    <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 1975</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2000</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2008</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2015 R1</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2016 R1</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2020 R1</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2022 R1</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2023 Ra</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2024</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+            <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2016</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+            <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2018</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2020</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2022</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2023</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2024</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+         <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/5d/c0/33/5dc033eeee421fb01c1081b4300234c2.jpg" alt="GTA VC (mobile)">
+            <p>Arduino IDE</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/86/ad/01/86ad01aac334ed269e9d33dab95a2217.jpg" alt="GTA VC (mobile)">
+            <p>Java JDK</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="" alt="Net Beans">
+            <p>Net Beans</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/45/3b/bc/453bbc3c7e0402535e36d48db68902e0.jpg" alt="GTA VC (mobile)">
+            <p>PyCharm craked (paid)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/7b/79/d8/7b79d8b02678ff6468bd10de85d22695.jpg" alt="GTA VC (mobile)">
+            <p>Dev C++</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+      <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/11/f6/aa/11f6aa8b9e684c2299d3bf37aa2da637.png" alt="GTA VC (mobile)">
+            <p>Auto CAD ME (2021)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+          <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/11/f6/aa/11f6aa8b9e684c2299d3bf37aa2da637.png" alt="GTA VC (mobile)">
+            <p>Auto CAD Civil (2021)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+              <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/11/f6/aa/11f6aa8b9e684c2299d3bf37aa2da637.png" alt="GTA VC (mobile)">
+            <p>Auto CAD EE (2021)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+                  <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/8a/7d/01/8a7d01efb33b1dfa0da8c831aa982723.jpg" alt="GTA VC (mobile)">
+            <p>Ravits 2016</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/8a/7d/01/8a7d01efb33b1dfa0da8c831aa982723.jpg" alt="GTA VC (mobile)">
+            <p>Ravits 2018</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/8a/7d/01/8a7d01efb33b1dfa0da8c831aa982723.jpg" alt="GTA VC (mobile)">
+            <p>Ravits 2020</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/8a/7d/01/8a7d01efb33b1dfa0da8c831aa982723.jpg" alt="GTA VC (mobile)">
+            <p>Ravits 2022</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/8a/7d/01/8a7d01efb33b1dfa0da8c831aa982723.jpg" alt="GTA VC (mobile)">
+            <p>Ravits 2023</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/8a/7d/01/8a7d01efb33b1dfa0da8c831aa982723.jpg" alt="GTA VC (mobile)">
+            <p>Ravits 2024</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+               <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/c2/11/cc/c211cc4abb1e1ff25c3149e395aa95d6.jpg" alt="GTA VC (mobile)">
+            <p>Fusion 360</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+                   <div class="icon-container">
+            <img src="https://media.getintopc.com/2021/06/Mastercam-2022-Free-Download-GetintoPC.com_-768x501.jpg" alt="GTA VC (mobile)">
+            <p>Master CAM</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+                   <div class="icon-container">
+            <img src="https://media.getintopc.com/2018/10/Nanjing-Swansoft-CNC-Simulator-7.2.2.0-GetintoPC.com_.jpg" alt="GTA VC (mobile)">
+            <p>CNC Simulator</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+                   <div class="icon-container">
+            <img src="https://ladderlogicworld.com/wp-content/uploads/2018/11/7-LadderLogicProgrammingEx_1-LadderLatchEx1.png" alt="GTA VC (mobile)">
+            <p>PLC compiler (Ladder)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        </div>
+            <h2>Ubuntu Linux Engineering Apps</h2>
+    <div class="container">
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 1975</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2000</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2008</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2015 R1</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2016 R1</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2020 R1</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2022 R1</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2023 Ra</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/eb/6c/59/eb6c597932be22b3f92941a8195b7828.jpg" alt="GTA VC (mobile)">
+            <p>Ansys Products 2024</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+            <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2016</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+            <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2018</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2020</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2022</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2023</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2024</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+         <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/5d/c0/33/5dc033eeee421fb01c1081b4300234c2.jpg" alt="GTA VC (mobile)">
+            <p>Arduino IDE</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/86/ad/01/86ad01aac334ed269e9d33dab95a2217.jpg" alt="GTA VC (mobile)">
+            <p>Java JDK</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="" alt="Net Beans">
+            <p>Net Beans</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/45/3b/bc/453bbc3c7e0402535e36d48db68902e0.jpg" alt="GTA VC (mobile)">
+            <p>PyCharm craked (paid)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+        </div>
+            <h2>MAC Engineering apps and Tools</h2>
+    <div class="container">
+    <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/bf/0e/b8/bf0eb8113936e019b4750158b3d16b2d.jpg" alt="GTA VC (mobile)">
+            <p>MS Office 2007</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/bf/0e/b8/bf0eb8113936e019b4750158b3d16b2d.jpg" alt="GTA VC (mobile)">
+            <p>MS Office 2016</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/bf/0e/b8/bf0eb8113936e019b4750158b3d16b2d.jpg" alt="GTA VC (mobile)">
+            <p>MS Office 2019</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/bf/0e/b8/bf0eb8113936e019b4750158b3d16b2d.jpg" alt="GTA VC (mobile)">
+            <p>MS Office 2021</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+        <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/bf/0e/b8/bf0eb8113936e019b4750158b3d16b2d.jpg" alt="GTA VC (mobile)">
+            <p>MS Office 2023</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+            <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/3f/cd/bf/3fcdbf7ed5aea8cc2cd87ffeb4ac4715.jpg" alt="GTA VC (mobile)">
+            <p>I-Work 2012</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+                <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/3f/cd/bf/3fcdbf7ed5aea8cc2cd87ffeb4ac4715.jpg" alt="GTA VC (mobile)">
+            <p>I-Work 2018</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+                <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/3f/cd/bf/3fcdbf7ed5aea8cc2cd87ffeb4ac4715.jpg" alt="GTA VC (mobile)">
+            <p>I-Work 2020</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+                <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/3f/cd/bf/3fcdbf7ed5aea8cc2cd87ffeb4ac4715.jpg" alt="GTA VC (mobile)">
+            <p>I-Work 2024</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+            <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2016</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+            <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2018</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2020</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2022</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2023</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+     <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/0d/a6/6c/0da66c94f957a2ca85da6c834a11f580.jpg" alt="GTA VC (mobile)">
+            <p>MatLab 2024</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+         <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/5d/c0/33/5dc033eeee421fb01c1081b4300234c2.jpg" alt="GTA VC (mobile)">
+            <p>Arduino IDE</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/86/ad/01/86ad01aac334ed269e9d33dab95a2217.jpg" alt="GTA VC (mobile)">
+            <p>Java JDK</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="" alt="Net Beans">
+            <p>Net Beans</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/45/3b/bc/453bbc3c7e0402535e36d48db68902e0.jpg" alt="GTA VC (mobile)">
+            <p>PyCharm craked (paid)</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div>
+        </div>
+         <h2>Windows editing and Graphics and Tools</h2>
+    <div class="container">
+                     <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/51/9e/9d/519e9dcf05900465494a939947db79dc.jpg" alt="GTA VC (mobile)">
+            <p>Filmora 9-12 pack</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/d0/6a/74/d06a74823aa8f22f823a5701e90157e6.jpg" alt="Net Beans">
+            <p>Adobe Light Room</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/e0/53/3c/e0533c571eba8abe6472edf7c8fee693.jpg" alt="GTA VC (mobile)">
+            <p>Blender 360</p>
+            <a href="download-link-6" class="button">Download</a>
+            </div>
+                         <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/5d/86/28/5d8628f6da6b98422a1ccea08bb382f4.jpg" alt="GTA VC (mobile)">
+            <p>Epic games (Unreal Engine)</p>
+            <a href="download-link-6" class="button">Download</a>
+            </div>
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/1b/13/bc/1b13bc37cd8e12d6d480530aab888095.jpg" alt="GTA VC (mobile)">
+            <p>Unity Engine</p>
+            <a href="download-link-6" class="button">Download</a>
+            </div>
+</div>
+   <h2>Ubuntu editing and Graphics Tools</h2>
+    <div class="container">
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/51/9e/9d/519e9dcf05900465494a939947db79dc.jpg" alt="GTA VC (mobile)">
+            <p>Filmora 9-12 pack</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/d0/6a/74/d06a74823aa8f22f823a5701e90157e6.jpg" alt="Net Beans">
+            <p>Adobe Light Room</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/e0/53/3c/e0533c571eba8abe6472edf7c8fee693.jpg" alt="GTA VC (mobile)">
+            <p>Blender 360</p>
+            <a href="download-link-6" class="button">Download</a>
+            </div>
+                         <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/5d/86/28/5d8628f6da6b98422a1ccea08bb382f4.jpg" alt="GTA VC (mobile)">
+            <p>Epic games (Unreal Engine)</p>
+            <a href="download-link-6" class="button">Download</a>
+            </div>
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/1b/13/bc/1b13bc37cd8e12d6d480530aab888095.jpg" alt="GTA VC (mobile)">
+            <p>Unity Engine</p>
+            <a href="download-link-6" class="button">Download</a>
+            </div>
+</div>
+   <h2>MAC editing and Graphics and Tools</h2>
+    <div class="container">
+           <div class="icon-container">
+            <img src="https://i.pinimg.com/originals/51/9e/9d/519e9dcf05900465494a939947db79dc.jpg" alt="GTA VC (mobile)">
+            <p>Filmora 9-12 pack</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/d0/6a/74/d06a74823aa8f22f823a5701e90157e6.jpg" alt="Net Beans">
+            <p>Adobe Light Room</p>
+            <a href="download-link-6" class="button">Download</a>
+    </div> 
+             <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/e0/53/3c/e0533c571eba8abe6472edf7c8fee693.jpg" alt="GTA VC (mobile)">
+            <p>Blender 360</p>
+            <a href="download-link-6" class="button">Download</a>
+            </div>
+                         <div class="icon-container">
+            <img src="https://i.pinimg.com/736x/5d/86/28/5d8628f6da6b98422a1ccea08bb382f4.jpg" alt="GTA VC (mobile)">
+            <p>Epic games (Unreal Engine)</p>
+            <a href="download-link-6" class="button">Download</a>
+            </div>
+                   <div class="icon-container">
+            <img src="https://i.pinimg.com/564x/1b/13/bc/1b13bc37cd8e12d6d480530aab888095.jpg" alt="GTA VC (mobile)">
+            <p>Unity Engine</p>
+            <a href="download-link-6" class="button">Download</a>
+            </div>
+</div>
+</body>
+
+<script>
+   
+document.querySelector('.menu-icon').addEventListener('click', function() {
     document.querySelector('.nav-menu').classList.toggle('open');
 });
-    </script>
-     <footer class="footer">
+
+
+  </script>
+<footer class="footer">
     <p>&copy; 2024 UR Frequency. All rights reserved.</p>
     <p>Just for Hobby</p>
       Follow us on: 
@@ -213,5 +993,5 @@
       <a href="https://www.instagram.com/ur._frequency/" target="_blank">Instagram</a>
     </p>
   </footer>
-</body>
-</html>
+  </head>
+    
